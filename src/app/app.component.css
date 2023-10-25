@@ -1,0 +1,35 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.fromDiv,
+.toDiv {
+  margin: 10px;
+}
+
+.conversionDiv {
+  display: flex;
+  justify-content: flex-start;
+
+  flex-direction: column;
+}
+
+.fromLbl,
+.toLbl {
+  display: block;
+  width: 100px;
+}
+
+.selectorField {
+  margin-right: 10px;
+}

@@ -1,0 +1,34 @@
+<div class="main">
+  <h1>Currency Convertor</h1>
+
+  <div class="conversionDiv">
+    <div class="fromDiv">
+      <label class="fromLbl" for="from">From: </label>
+      <select
+        class="selectorField"
+        name="from"
+        id="from"
+        [(ngModel)]="selectedFrom"
+      >
+        <option value="{{ currency }}" *ngFor="let currency of currencyList">
+          {{ currency }}
+        </option>
+      </select>
+      <input
+        type="number"
+        [(ngModel)]="inputValue"
+        (ngModelChange)="convertAmount()"
+      />
+    </div>
+
+    <div class="toDiv">
+      <label class="toLbl" for="to">To: </label>
+      <select class="selectorField" name="to" id="to" [(ngModel)]="selectedTo">
+        <option value="{{ currency }}" *ngFor="let currency of currencyList">
+          {{ currency }}
+        </option>
+      </select>
+      <span>{{ outputValue }} {{ selectedTo }}</span>
+    </div>
+  </div>
+</div>
